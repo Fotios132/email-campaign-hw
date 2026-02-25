@@ -45,82 +45,185 @@
 			    font-weight: inherit;
 			    line-height: inherit;
 			}
-
-			/* Universal styles for links and stuff */
 		
+			/* PEC assigment part @@@*/
+			@media screen and (max-width: 600px) {
+				table[class="mobile"] { width: 100% !important; }
+				table[class="block"]  { display: block !important; width: 100% !important; }
+				h1 { font-size: 22px !important; }
+				p  { font-size: 15px !important; }
+			}
+			/* PEC assigment part */
+			.btn:hover { background-color: #3e8e41 !important; }
+			.link:hover { text-decoration: underline !important; }
+			/* PEC assigment part */
+			@keyframes wiggle {
+				0% { transform: translateX(0); }
+				50% { transform: translateX(6px); }
+				100% { transform: translateX(0); }
+			}
+			.btn:hover .arrow { display: inline-block !important; animation: wiggle 0.6s infinite; }
 
-			/* Responsive styles */
-	
+			/* PEC assigment part */
+			.rsvp input { display: none; } /* is hiding radio button */
+			.rsvp label{
+				display:inline-block;
+				padding:10px 14px;
+				margin:6px 4px;
+				border:1px solid #ccc;
+				border-radius:8px;
+				background:#fff;
+				font-family: Arial;
+				cursor:pointer;
+			}
+			.rsvp .panel{
+				display:none; 
+				margin-top:10px;
+				padding:12px;
+				border:1px solid #ccc;
+				border-radius:8px;
+				background:#fff;
+				font-family: Arial;
+				text-align:center;
+			}
+			
+			#rsvpToggle:checked ~ .yesPanel { display:block; }
+
+      /* RADIO for the project I run out of ideas and time */
+      #snack:checked ~ .snackPanel { display:block; }
+      #meal:checked  ~ .mealPanel  { display:block; }
 		</style>
 	</head>
 
 	<body id="body" style="margin: 0 !important; padding: 0 !important;">
 
-  <!-- OUTER container  -->
+  <!-- outside table backgroundd -->
   <table width="100%">
     <tr><td align="center" style="background-image: url('images/back1.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 		
-        <!-- Inner fixed table: recommended 600px width .all done professor-->
-        <table width="600">
+        <!-- Email tab;e -->
+        <table width="400" class="mobile">
 
-		<!-- Logo image -->	
+			<!-- Logo -->
 			<tr><td style="background-color: powderblue; text-align:center;">
-				<div style="text-align: center; padding: 20px;">
-				<img src="images/coc-logo.png" alt="College Of The Canyons Logo" width="150">
+				<div style="text-align: center; padding: 10px;">
+				<img src="images/coc-logo.png" alt="College Of The Canyons Logo" width="120">
 				</div>
 			</td></tr>
 
-          <!-- Headline -->
+			<!-- Headline -->
           <tr><td style="background-color: powderblue;"> 
-			<div style="text-align: center; padding: 10px;">
+			<div style="text-align: center; padding: 15px;">
 			<h1 style="text-align:center; background-color: powderblue;">College of the Canyons Welcome Event</h1>
 		</div>
 		</td></tr>
 
-          <!-- Hero Image -->
+			<!-- Hero Image -->
           <tr><td style="background-color: powderblue;"> 
 			 <div style="text-align: center; padding: 10px;">
-        <img src="images/party2.png" alt="College of the Canyons Campus" style="width: 100%; max-width: 600px;">
+        <img src="images/party2.png" alt="College of the Canyons Campus" style="width: 100%; max-width: 400px;">
 			 </div>
 	     </td></tr>
 
-          <!-- Body copy -->
+			<!-- Body -->
           <tr><td style="background-color: powderblue;"> 
 			<div style="text-align: center; padding: 20px;">
-        <p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; text-align: center;">
-        <strong>Date:</strong> December 15, 2026<br><br>
-        Dear Student,<br><br>
-       You are invited to the College of the Canyons Winter Party! Come and enjoy the music, food, and fun activities while meeting new students and staff. We hope to see you there and celebrate the season together.<br><br>
-        Sincerely,<br>
-        College ff the Canyons</p>
+				<p style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.4; text-align: center; margin:0;">
+					Dear Student,<br>
+					You are invited to the College of the Canyons Winter Party!<br>
+					Sincerely,<br>
+					College of the Canyonss</p>
 		</div>
 			 </td></tr>
 
-          <!-- Button -->
+          <!-- buttons and  links small improvments -->
           <tr><td style="background-color: powderblue;"> 
 		<div style ="text-align: center; padding: 20px;">
-        <button type="button" style="background-color: #4CAF50; color: white; padding: 15px 32px; border: none; font-family: Arial; border-radius: 8px; cursor: pointer; text-align: center;">
-          Click For Info
-        </button>
-      </div>
+			<a href="https://www.canyons.edu"
+			 class="btn"
+			 style="background-color:#4CAF50; color:white; padding:15px 32px; 
+			   border-radius:8px; text-decoration:none; font-family:Arial; display:inline-block;">
+			   Click For Info <span class="arrow">→</span>
+			</a>
 
+		<div style="padding-top: 12px; font-family: Arial; font-size: 14px;">
+			<a class="link" href="https://www.canyons.edu/canyoncountry/events/" style="color: #1a5bd7;">View Event Details</a>
+		</div>
+
+      </div>
 		 </td></tr>
 
+		<!-- the 2 column layout -->
+		<tr><td style="background-color: powderblue; padding: 10px 20px;">
+				<table width="100%">
+					<tr><td>
+							<!-- left part column -->
+							<table class="block" align="left" width="42%">
+								<tr><td style="padding:10px; text-align:center; font-family:Arial;">Location<br>Stadium</td></tr>
+							</table>
 
-		<!-- Footer information: Always include an unsubscribe link! -->
+							<!-- right part column -->
+							<table class="block" align="right" width="42%">
+								<tr><td style="padding:10px; text-align:center; font-family:Arial;">Time<br>4:30 PM</td></tr>
+							</table>
+						</td></tr>
+				</table>
+			</td></tr>
+
+		<!-- 3 columns -->
+		<tr>
+			<td style="background-color: powderblue; padding: 10px 20px;">
+				<table width="100%">
+					<tr><td>
+							<!-- 1 -->
+							<table class="block" align="left" width="33%"><tr><td style="padding:10px;text-align:center;font-family:Arial;">Food</td></tr></table>
+							<!-- 2 -->
+							<table class="block" align="left" width="33%"><tr><td style="padding:10px;text-align:center;font-family:Arial;">Music</td></tr></table>
+							<!-- 3 -->
+							<table class="block" align="right" width="33%"><tr><td style="padding:10px;text-align:center; font-family:Arial;">Games</td></tr></table>
+						</td></tr>
+				</table>
+			</td></tr>
+
+		<!--  This part is for radio, divs, and labels -->
+		  <tr><td style="background-color: powderblue; padding: 10px 20px;">
+			<div class="rsvp" style="text-align:center; padding:10px;">
+				<b style="font-family:Arial;">RSVP</b><br>
+
+				<input type="checkbox" id="rsvpToggle">
+				<label for="rsvpToggle">I Will Attend</label>
+
+				<div class="panel yesPanel">Cant wait to see you!!!</div>
+
+        <!-- ADDED: simple functional radio buttons + divs -->
+        <b style="font-family:Arial; display:block; margin-top:12px;">Will there be snacks</b>
+
+        <input type="radio" name="food" id="snack">
+        <label for="snack">Yes</label>
+
+        <input type="radio" name="food" id="meal">
+        <label for="meal">No</label>
+
+        <div class="panel snackPanel">Of course its a party</div>
+        <div class="panel mealPanel">try again </div>
+
+			</div>
+			
+		</td></tr>
+
+			<!-- FOOTER -->
           <tr><td style="background-color: powderblue;"> 
 			 <div style="text-align: center; padding: 10px;">
 			 <p style="font-family: Arial; font-size: 12px; color: gray; text-align: center;">
-        <a href="#" style="color: gray;">Unsubscribe From Future Invitations :3</a>
+        <a class="link" href="https://www.canyons.edu/canyoncountry/events/" style="color: gray;">Unsubscribe From Future Invitations :3</a>
       </p>
            </div>
 		  </td></tr>
 
         </table>
 
-      </td></tr>
-
-	
+      </td> </tr>
   </table>
 
 </body>
+</html> 
