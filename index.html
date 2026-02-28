@@ -46,25 +46,26 @@
 			    line-height: inherit;
 			}
 		
-			/* PEC assigment part @@@*/
+			/* PEC assigment part */
 			@media screen and (max-width: 600px) {
 				table[class="mobile"] { width: 100% !important; }
 				table[class="block"]  { display: block !important; width: 100% !important; }
 				h1 { font-size: 22px !important; }
 				p  { font-size: 15px !important; }
 			}
-			/* PEC assigment part */
+			/* PEC assigment part hover visualization @@@@ */
 			.btn:hover { background-color: #3e8e41 !important; }
-			.link:hover { text-decoration: underline !important; }
-			/* PEC assigment part */
+			.link:hover { text-decoration: underline !important; } /*text link */
+			/* PEC assigment part  wiggles button */
 			@keyframes wiggle {
 				0% { transform: translateX(0); }
-				50% { transform: translateX(6px); }
-				100% { transform: translateX(0); }
+		    50% { transform: translateX(6px); }
+			 100% { transform: translateX(0); }
 			}
-			.btn:hover .arrow { display: inline-block !important; animation: wiggle 0.6s infinite; }
+			.btn:hover .arrow {
+				 display: inline-block !important; animation: wiggle 0.6s infinite; } 
 
-			/* PEC assigment part */
+			/* PEC assigment part @@@@*/
 			.rsvp input { display: none; } 
 			.rsvp label{
 				display:inline-block;
@@ -86,7 +87,7 @@
 				font-family: Arial;
 				text-align:center;
 			}
-			
+			/*Check box radio */
 			#rsvpToggle:checked ~ .yesPanel { display:block; }
 
       /* RADIO for the project I run out of ideas and time */
@@ -98,18 +99,18 @@
 	<body id="body" style="margin: 0 !important; padding: 0 !important;">
 
   <!-- outside table backgroundd -->
-  <table width="100%">
-    <tr><td align="center" style="background-image: url('images/back1.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+         <table width="100%">
+      <tr><td align="center" style="background-color: powderblue;">
 		
         <!-- Email tab;e -->
         <table width="400" class="mobile">
 
 			<!-- Logo -->
-			<tr><td style="background-color: powderblue; text-align:center;">
-				<div style="text-align: center; padding: 10px;">
-				<img src="images/coc-logo.png" alt="College Of The Canyons Logo" width="120">
-				</div>
-			</td></tr>
+      <tr><td style="background-color: powderblue; text-align:center;">
+               <div style="text-align: center; padding: 10px;">
+        <img src="https://www.canyons.edu/_images/administration/pio/coc_logo_1200px.jpg" alt="College Of The Canyons Logo" width="120">
+		</div>
+	 </td></tr>
 
 			<!-- Headline -->
           <tr><td style="background-color: powderblue;"> 
@@ -121,7 +122,9 @@
 			<!-- Hero Image -->
           <tr><td style="background-color: powderblue;"> 
 			 <div style="text-align: center; padding: 10px;">
-        <img src="images/party2.png" alt="College of the Canyons Campus" style="width: 100%; max-width: 400px;">
+       <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop"
+              alt="College of the Canyons Campus"
+               style="width: 100%; max-width: 400px;">
 			 </div>
 	     </td></tr>
 
@@ -136,7 +139,7 @@
 		</div>
 			 </td></tr>
 
-          <!-- buttons and  links small improvments -->
+          <!-- buttons and  links small improvments  -->
           <tr><td style="background-color: powderblue;"> 
 		<div style ="text-align: center; padding: 20px;">
 			<a href="https://www.canyons.edu"
@@ -189,7 +192,7 @@
 		  <tr><td style="background-color: powderblue; padding: 10px 20px;">
 			<div class="rsvp" style="text-align:center; padding:10px;">
 				<b style="font-family:Arial;">RSVP</b><br>
-
+				<!--Interctyive radio and check button -->
 				<input type="checkbox" id="rsvpToggle">
 				<label for="rsvpToggle">I Will Attend</label>
 
@@ -215,6 +218,7 @@
           <tr><td style="background-color: powderblue;"> 
 			 <div style="text-align: center; padding: 10px;">
 			 <p style="font-family: Arial; font-size: 12px; color: gray; text-align: center;">
+				<!--Link-->
         <a class="link" href="https://www.canyons.edu/canyoncountry/events/" style="color: gray;">Unsubscribe From Future Invitations :3</a>
       </p>
            </div>
@@ -222,7 +226,8 @@
 
         </table>
 
-      </td> </tr>
+      </td> 
+	</tr>
   </table>
 
 </body>
